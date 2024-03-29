@@ -21,7 +21,7 @@ app.use(
       "https://hotel-booking-reactjs.netlify.app"
     ],
     credentials: true,
-    methods: ["GET", "POST", "OPTIONS", "PUT", "DELETE", "HEAD"],
+    methods: ["GET, POST, PUT, DELETE, OPTIONS, HEAD"],
     allowedHeaders: "Content-Type,Authorization"
   })
 );
