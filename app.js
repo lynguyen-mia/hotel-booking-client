@@ -17,8 +17,8 @@ app.set("trust proxy", 1);
 app.use(
   cors({
     origin: [
-      "https://hotel-booking-reactjs.netlify.app",
-      "https://hotel-booking-reactjs-admin.netlify.app"
+      "https://hotel-booking-reactjs-admin.netlify.app",
+      "https://hotel-booking-reactjs.netlify.app"
     ],
     credentials: true,
     methods: ["GET", "POST", "OPTIONS", "PUT", "DELETE", "HEAD"],
