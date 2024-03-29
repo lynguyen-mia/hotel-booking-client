@@ -22,7 +22,7 @@ app.use(
     ],
     credentials: true,
     methods: ["GET, POST, PUT, DELETE, OPTIONS, HEAD"],
-    allowedHeaders: "Content-Type,Authorization"
+    allowedHeaders: "Origin, Content-Type, Accept,Authorization"
   })
 );
 app.use(express.json());
