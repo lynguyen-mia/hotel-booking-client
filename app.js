@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const cors = require("cors");
-const authenticateToken = require("./utils/authenticateToken");
+const MONGODB_URI = `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@booking-site.4csksum.mongodb.net/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`;
 
 // Models
 const Hotel = require("./models/hotel");
@@ -28,10 +28,6 @@ app.use(authRoutes);
 app.use(bookingRoutes);
 app.use(adminRoutes);
 
-mongoose
-  .connect(
-    "mongodb+srv://nguyenthihuongly21:Xd7J2dbJr8qR5DRU@booking-site.4csksum.mongodb.net/booking?retryWrites=true&w=majority"
-  )
-  .then(() => {
-    app.listen(5000);
-  });
+mongoose.connect(MONGODB_URI).then(() => {
+  app.listen(process.env.PORT || 5000);
+});
