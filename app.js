@@ -16,7 +16,10 @@ const adminRoutes = require("./routes/admin");
 app.set("trust proxy", 1);
 app.use(
   cors({
-    origin: "*",
+    origin: [
+      "https://hotel-booking-reactjs.netlify.app",
+      "https://hotel-booking-reactjs-admin.netlify.app"
+    ],
     credentials: true,
     methods: ["GET", "POST", "OPTIONS", "PUT", "DELETE", "HEAD"],
     allowedHeaders: "Content-Type,Authorization"
