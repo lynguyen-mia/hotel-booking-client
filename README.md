@@ -9,7 +9,7 @@ This NodeJS server provides the backend foundation for a hotel booking applicati
 - Order Processing: Manages the order lifecycle, from product selection to checkout.
 - Admin Dashboard: Provides a user-friendly interface for administrators to manage hotels, rooms, transactions.
 
-- Tech Stack:
+## Tech Stack:
 - Backend: NodeJS, Express.js
 - Database: MongoDB with Mongoose, a Node.js ORM (Object-Relational Mapper)
 - Security: Secure coding practices (token authorization, password encryption), input validation and sanitization.
